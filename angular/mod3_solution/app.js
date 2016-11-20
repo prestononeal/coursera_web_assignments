@@ -31,7 +31,7 @@ function MenuSearchService($http, ApiBasePath) {
       url: (ApiBasePath + '/menu_items.json')
     })
     .then(function(result) {
-      // Check the menu items against the given search term
+      // Filter the menu items, comparing their descriptions against the given search term
       var matches = result.data.menu_items.filter(function(element) {
         return (element.description.toLowerCase().indexOf(searchTerm) === -1) ? false : true
       });
