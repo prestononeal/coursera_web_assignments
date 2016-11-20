@@ -9,6 +9,7 @@ angular.module('NarrowItDownApp', [])
 
 function FoundItemsDirective() {
   var ddo = {
+    restrict: 'E',
     templateUrl: 'foundItems.html',
     scope: {
       found: '<',
@@ -47,7 +48,7 @@ function NarrowItDownController(MenuSearchService) {
   var narrow = this;
 
   narrow.search = '';
-  narrow.found = [];
+  narrow.loading = false;
 
   narrow.removeItem = function(itemIndex) {
     narrow.found.splice(itemIndex, 1);
@@ -55,13 +56,16 @@ function NarrowItDownController(MenuSearchService) {
 
   narrow.searchMatchedItems = function() {
     if (narrow.search) {
+      narrow.loading = true;
       // getMatchedMenuItems() returns a promise
       MenuSearchService.getMatchedMenuItems(narrow.search)
       .then(function(result) {
         narrow.found = result;
+        narrow.loading = false;
       })
       .catch(function(error) {
         console.log('Could not get matches: ', error);
+        narrow.loading = false;
       });
     } else {
       narrow.found = [];

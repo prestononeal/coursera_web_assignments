@@ -1,4 +1,4 @@
-<h3 ng-if="!found.length">Nothing found</h3>
+<h3 ng-if="found.length === 0">Nothing found</h3>
 <ul>
   <li ng-repeat="item in found">
     <b>{{ item.name }}</b> ({{ item.short_name}}): {{ item.description }}

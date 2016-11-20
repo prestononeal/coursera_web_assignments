@@ -3,10 +3,10 @@
   <head>
     <title>Narrow Down Your Menu Choice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="angular.min.js"></script>
-    <script src="app.js"></script>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
   </head>
 <body ng-app="NarrowItDownApp">
    <div ng-controller="NarrowItDownController as narrow" class="container">
@@ -18,6 +18,7 @@
     <div class="form-group narrow-button">
       <button ng-click="narrow.searchMatchedItems()" class="btn btn-primary">Narrow It Down For Me!</button>
     </div>
+    <div ng-show="narrow.loading" class="loader"></div>
 
     <!-- found-items is implemented as a directive -->
     <br clear="left"/>
