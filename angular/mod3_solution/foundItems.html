@@ -1,7 +1,7 @@
-<h3 ng-if="found.length">Matching choices:</h3>
-<ol>
+<h3 ng-if="!found.length">Nothing found</h3>
+<ul>
   <li ng-repeat="item in found">
-    {{ item.name }}
+    {{ item.name }}, {{ item.short_name }}, {{ item.description }}
     <button ng-click="onRemove({index: $index});" class="btn btn-default">Don't want this one!</button>
   </li>
-</ol>
+</ul>

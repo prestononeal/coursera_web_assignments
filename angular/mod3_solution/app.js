@@ -54,14 +54,18 @@ function NarrowItDownController(MenuSearchService) {
   };
 
   narrow.searchMatchedItems = function() {
-    // getMatchedMenuItems() returns a promise
-    MenuSearchService.getMatchedMenuItems(narrow.search)
-    .then(function(result) {
-      narrow.found = result;
-    })
-    .catch(function(error) {
-      console.log('Could not get matches: ', error);
-    })
+    if (narrow.search) {
+      // getMatchedMenuItems() returns a promise
+      MenuSearchService.getMatchedMenuItems(narrow.search)
+      .then(function(result) {
+        narrow.found = result;
+      })
+      .catch(function(error) {
+        console.log('Could not get matches: ', error);
+      });
+    } else {
+      narrow.found = [];
+    }
   };
 }
 
