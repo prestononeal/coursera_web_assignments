@@ -32,12 +32,9 @@ function MenuSearchService($http, ApiBasePath) {
     })
     .then(function(result) {
       // Check the menu items against the given search term
-      var matches = []
-      for(var i = 0; i < result.data.menu_items.length; i++) {
-        if (result.data.menu_items[i].description.toLowerCase().indexOf(searchTerm) !== -1) {
-          matches.push(result.data.menu_items[i]);
-        }
-      }
+      var matches = result.data.menu_items.filter(function(element) {
+        return (element.description.toLowerCase().indexOf(searchTerm) === -1) ? false : true
+      });
       return matches;
     });
   };
