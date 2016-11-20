@@ -1,7 +1,21 @@
-<h3 ng-if="found.length === 0">Nothing found</h3>
-<ul>
-  <li ng-repeat="item in found">
-    <b>{{ item.name }}</b> ({{ item.short_name}}): {{ item.description }}
-    <button ng-click="onRemove({index: $index});" class="btn btn-default">Don't want this one!</button>
-  </li>
-</ul>
+<div class="table-responsive">
+<table class="table" ng-if="found.length > 0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Item</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in found">
+      <th>{{ item.short_name }}</th>
+      <td>{{ item.name }}</td>
+      <td>{{ item.description }}</td>
+      <td><button ng-click="onRemove({index: $index});" class="btn btn-default">Don't want this one!</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h3 ng-if="found.length === 0" id="error">Nothing found</h3>
