@@ -12,12 +12,14 @@
    <div ng-controller="NarrowItDownController as narrow" class="container">
     <h1>Narrow Down Your Chinese Menu Choice</h1>
 
-    <div class="form-group">
-      <input ng-model="narrow.search" type="text" placeholder="search term" class="form-control">
-    </div>
-    <div class="form-group narrow-button">
-      <button ng-click="narrow.searchMatchedItems()" class="btn btn-primary">Narrow It Down For Me!</button>
-    </div>
+    <form ng-submit="narrow.searchMatchedItems()">
+      <div class="form-group">
+        <input ng-model="narrow.search" type="text" placeholder="search term" class="form-control">
+      </div>
+      <div class="form-group narrow-button">
+        <button ng-click="narrow.searchMatchedItems()" class="btn btn-primary">Narrow It Down For Me!</button>
+      </div>
+    </form>
     <div ng-show="narrow.loading" class="loader"></div>
 
     <!-- found-items is implemented as a directive -->
