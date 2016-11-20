@@ -10,7 +10,7 @@ input[type="text"] {
   margin-left: 10px;
 }
 .loader {
-  margin-left: 5px;
+  margin-left: 10px;
   font-size: 10px;
   float: left;
   border-top: 1.1em solid rgba(147, 147, 147, 0.2);
