@@ -1,8 +1,13 @@
-<div class="list-group">
-  <a ng-repeat="category in catCtrl.categories" class="list-group-item list-group-item-action" ui-sref="categories.items({categoryId: category.short_name})">
-  {{category.name}}
+<div class="col-sm-6">
+  <h3>Categories:</h3>
+  <div class="list-group">
+    <a ng-repeat="category in catCtrl.categories" class="list-group-item list-group-item-action" ui-sref="categories.items({categoryId: category.short_name})">
+    {{category.name}}
+    </a>
+  </div>
+</div>
+<div class="col-sm-6">
   <ui-view></ui-view>
-  </a>
 </div>
 <div ng-if="catCtrl.categories.length === 0" class="alert alert-danger">
   <strong>Error!</strong> No categories returned.
