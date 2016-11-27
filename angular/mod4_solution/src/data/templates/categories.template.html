@@ -1,0 +1,8 @@
+<div class="list-group">
+  <a ng-repeat="category in catCtrl.categories" class="list-group-item list-group-item-action" href="test.html">
+  {{category.name}}
+  </a>
+</div>
+<div ng-if="catCtrl.categories.length === 0" class="alert alert-danger">
+  <strong>Error!</strong> No categories returned.
+</div>

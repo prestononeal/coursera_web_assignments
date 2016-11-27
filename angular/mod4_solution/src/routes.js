@@ -15,19 +15,26 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
 
   // Home page
   .state('home', {
-    url: '/'
+    url: '/',
+    templateUrl: 'src/data/templates/home.template.html'
   })
 
   // Categories
   .state('categories', {
-    url: '/categories'
+    url: '/categories',
+    templateUrl: 'src/data/templates/categories.template.html',
+    controller: "CategoriesController as catCtrl",
+    resolve: {
+      categories: ['MenuDataService', function(MenuDataService) {
+        return MenuDataService.getAllCategories();
+      }]
+    }
   })
 
   // Items
   .state('categories.items', {
     url: '/items'
   })
-
 
 }
 
