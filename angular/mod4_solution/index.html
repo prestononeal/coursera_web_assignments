@@ -2,12 +2,15 @@
 <html ng-app="MenuApp">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Simple Restaurant Menu App</title>
 </head>
 <body>
-  <h1 ui-sref="home" class="clickable">Welcome to our restaurant menu!</h1>
+  <h1 ui-sref="home" class="clickable">Welcome to our restaurant menu!
+    <loading-spinner></loading-spinner>
+  </h1>
 
   <ui-view></ui-view>
 
@@ -18,6 +21,7 @@
   <!-- Modules -->
   <script src="src/menuapp/menuapp.module.js"></script>
   <script src="src/data/data.module.js"></script>
+  <script src="src/spinner/spinner.module.js"></script>
 
   <!-- Routes -->
   <script src="src/routes.js"></script>
@@ -28,6 +32,7 @@
   <script src="src/data/categories.controller.js"></script>
   <script src="src/data/items.component.js"></script>
   <script src="src/data/items.controller.js"></script>
+  <script src="src/spinner/loadingspinner.component.js"></script>
 
 </body>
 </html>
