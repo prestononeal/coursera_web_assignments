@@ -1,9 +1,9 @@
-<h3>{{itemsCtrl.category}} Items:</h3>
+<h3>{{$ctrl.category}} Items:</h3>
 <div class="list-group">
-  <div ng-repeat="item in itemsCtrl.items" class="list-group-item">
+  <div ng-repeat="item in $ctrl.items" class="list-group-item">
   {{item.name}}
   </div>
 </div>
-<div ng-if="itemsCtrl.items.length === 0" class="alert alert-danger">
+<div ng-if="$ctrl.items.length === 0" class="alert alert-danger">
   <strong>Error!</strong> No items returned.
 </div>
