@@ -42,7 +42,7 @@
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button ng-disabled="signup.$invalid" type="submit" class="btn btn-default">Submit</button>
+        <button ng-disabled="signup.$invalid" ng-click="signupFormCtrl.submitForm()" type="submit" class="btn btn-default">Submit</button>
       </div>
     </div>
 
