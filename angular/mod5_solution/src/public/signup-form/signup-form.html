@@ -1,1 +1,51 @@
-SIGN UP HERE
+<div class="container">
+  <h3 id="signupHeader">Sign up for special offers!</h3>
+  <form class="form-horizontal" name="signup" novalidate>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">First name:</label>
+      <div class="col-sm-10">
+        <input type="text" name="firstName" class="form-control" placeholder="Enter first name" ng-model="signupFormCtrl.firstName" required minlength="2">
+      </div>
+      <span class="col-sm-offset-2 col-sm-10" ng-if="(signup.firstName.$error.minlength || signup.firstName.$error.required) && signup.firstName.$touched">First name must be at least 2 characters long</span>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">Last name:</label>
+      <div class="col-sm-10">
+        <input type="text" name="lastName" class="form-control" placeholder="Enter last name" ng-model="signupFormCtrl.lastName" required minlength="2">
+      </div>
+      <span class="col-sm-offset-2 col-sm-10" ng-if="(signup.lastName.$error.minlength || signup.lastName.$error.required) && signup.lastName.$touched">Last name must be at least 2 characters long</span>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">Email:</label>
+      <div class="col-sm-10">
+        <input type="email" name="email" class="form-control" placeholder="Enter email" ng-model="signupFormCtrl.email" required minlength="2">
+      </div>
+      <span class="col-sm-offset-2 col-sm-10" ng-if="signup.email.$invalid && signup.email.$touched">Must be a valid e-mail: handle@domain format</span>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">Phone #:</label>
+      <div class="col-sm-10">
+        <input type="text" name="phone" class="form-control" placeholder="Enter phone ###-###-####" ng-model="signupFormCtrl.phone" required pattern="(\d{3})-(\d{3})-(\d{4})">
+      </div>
+      <span class="col-sm-offset-2 col-sm-10" ng-if="signup.phone.$invalid && signup.phone.$touched">Must be a valid phone number with format ###-###-####</span>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">Favorite dish:</label>
+      <div class="col-sm-10">
+        <input type="text" name="favoriteDish" class="form-control" placeholder="Enter favorite dish (optional)" ng-model="signupFormCtrl.favoriteDish">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button ng-disabled="signup.$invalid" type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+
+  </form>
+</div>

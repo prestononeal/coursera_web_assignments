@@ -1,8 +1,28 @@
+input {
+  color: #557c3e;
+}
+
+legend {
+  color: white;
+}
+
 body {
   font-size: 16px;
   color: #fff;
   background-color: #61122f;
   font-family: 'Oxygen', sans-serif;
+}
+
+#signupHeader {
+  text-align: center;
+}
+
+.ng-touched.ng-valid {
+  border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
 }
 
 .initial-loading {
