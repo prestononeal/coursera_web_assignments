@@ -13,6 +13,7 @@ function SignupFormController($http) {
   $ctrl.email = '';
   $ctrl.phone = '';
   $ctrl.favoriteDish = '';
+  $ctrl.msg = '';
 }
 
 })();

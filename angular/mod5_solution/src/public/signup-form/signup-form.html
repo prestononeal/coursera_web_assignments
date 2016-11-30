@@ -1,7 +1,6 @@
 <div class="container">
-  <h3 id="signupHeader">Sign up for special offers!</h3>
+  <h3 class="signupInfo">Sign up for special offers!</h3>
   <form class="form-horizontal" name="signup" novalidate>
-
     <div class="form-group">
       <label class="control-label col-sm-2">First name:</label>
       <div class="col-sm-10">
@@ -47,5 +46,6 @@
       </div>
     </div>
 
+    <div class="col-sm-offset-2 col-sm-10">{{ signupFormCtrl.msg }}</div>
   </form>
 </div>
