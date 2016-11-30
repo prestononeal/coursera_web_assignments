@@ -1,0 +1,9 @@
+<div ng-if="!myInfoCtrl.initialized">Not signed up yet. <a ui-sref="public.signupForm">Sign up now!</a></div>
+<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.firstName}}</div>
+<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.lastName}}</div>
+<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.email}}</div>
+<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.phone}}</div>
+<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.favoriteShortName}}</div>
+<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.favoriteName}}</div>
+<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.favoriteDescription}}</div>
+<img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.favoriteShortName}}.jpg" alt="{{myInfoCtrl.favoriteShortName}}">
