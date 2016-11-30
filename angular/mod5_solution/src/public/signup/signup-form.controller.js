@@ -22,15 +22,13 @@ function SignupFormController($http, ApiPath, UserInfoService) {
       url: ApiPath + '/menu_items/' + $signupFormCtrl.favoriteShortName + '.json'
     })
     .then(function(result) {
-      console.log(result);
-      // TODO: save the information to a service
       UserInfoService.firstName = $signupFormCtrl.firstName;
       UserInfoService.lastName = $signupFormCtrl.lastName;
       UserInfoService.email = $signupFormCtrl.email;
       UserInfoService.phone = $signupFormCtrl.phone;
-      UserInfoService.favoriteShortName = $signupFormCtrl.favoriteShortName;
-      UserInfoService.favoriteName = result.data.name;
-      UserInfoService.favoriteDescription = result.data.description;
+      UserInfoService.favorite.shortName = $signupFormCtrl.favoriteShortName;
+      UserInfoService.favorite.longName = result.data.name;
+      UserInfoService.favorite.description = result.data.description;
       UserInfoService.initialized = true;
       $signupFormCtrl.msg = 'Your information has been saved';
     })

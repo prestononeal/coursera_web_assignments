@@ -3,7 +3,7 @@
 <div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.lastName}}</div>
 <div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.email}}</div>
 <div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.phone}}</div>
-<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.favoriteShortName}}</div>
-<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.favoriteName}}</div>
-<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.favoriteDescription}}</div>
-<img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.favoriteShortName}}.jpg" alt="{{myInfoCtrl.favoriteShortName}}">
+<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.favorite.shortName}}</div>
+<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.favorite.longName}}</div>
+<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.favorite.description}}</div>
+<img ng-if="myInfoCtrl.initialized" class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.favorite.shortName}}.jpg" alt="{{myInfoCtrl.favorite.shortName}}">

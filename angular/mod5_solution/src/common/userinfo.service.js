@@ -13,9 +13,11 @@ function UserInfoService() {
   service.lastName = '';
   service.email = '';
   service.phone = '';
-  service.favoriteShortName = '';
-  service.favoriteName = '';
-  service.favoriteDescription = '';
+  service.favorite = {
+    shortName: '',
+    longName: '',
+    description: ''
+  };
   service.initialized = false;
 }
 
