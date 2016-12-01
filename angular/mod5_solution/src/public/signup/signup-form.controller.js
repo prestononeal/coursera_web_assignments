@@ -26,9 +26,7 @@ function SignupFormController($http, ApiPath, UserInfoService) {
       UserInfoService.lastName = $signupFormCtrl.lastName;
       UserInfoService.email = $signupFormCtrl.email;
       UserInfoService.phone = $signupFormCtrl.phone;
-      UserInfoService.favorite.shortName = $signupFormCtrl.favoriteShortName;
-      UserInfoService.favorite.longName = result.data.name;
-      UserInfoService.favorite.description = result.data.description;
+      UserInfoService.favorite = result.data;
       UserInfoService.initialized = true;
       $signupFormCtrl.msg = 'Your information has been saved';
     })

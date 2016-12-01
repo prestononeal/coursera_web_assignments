@@ -13,11 +13,7 @@ function MyInfoController(UserInfoService, ApiPath) {
   myInfoCtrl.lastName = UserInfoService.lastName;
   myInfoCtrl.email = UserInfoService.email;
   myInfoCtrl.phone = UserInfoService.phone;
-  myInfoCtrl.favorite = {
-    shortName: UserInfoService.favorite.shortName,
-    longName: UserInfoService.favorite.longName,
-    description: UserInfoService.favorite.description
-  }
+  myInfoCtrl.favorite = UserInfoService.favorite;
   myInfoCtrl.initialized = UserInfoService.initialized;
   myInfoCtrl.basePath = ApiPath;
 }

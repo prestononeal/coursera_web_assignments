@@ -113,6 +113,22 @@ h3.menu-item-title {
 }
 /* END SINGLE CATEGORY PAGE */
 
+/* SIGNUP PAGE */
+input {
+  color: #557c3e;
+}
+
+legend {
+  color: white;
+}
+/* END SIGNUP PAGE */
+
+/* MY INFO PAGE */
+#my-info {
+  color: #557c3e;
+}
+/* END MY INFO PAGE */
+
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {

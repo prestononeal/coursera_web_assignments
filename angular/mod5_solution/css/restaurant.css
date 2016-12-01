@@ -1,20 +1,8 @@
-input {
-  color: #557c3e;
-}
-
-legend {
-  color: white;
-}
-
 body {
   font-size: 16px;
   color: #fff;
   background-color: #61122f;
   font-family: 'Oxygen', sans-serif;
-}
-
-.signupInfo {
-  text-align: center;
 }
 
 .ng-touched.ng-valid {

@@ -1,9 +1,12 @@
-<div ng-if="!myInfoCtrl.initialized">Not signed up yet. <a ui-sref="public.signupForm">Sign up now!</a></div>
-<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.firstName}}</div>
-<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.lastName}}</div>
-<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.email}}</div>
-<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.phone}}</div>
-<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.favorite.shortName}}</div>
-<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.favorite.longName}}</div>
-<div ng-if="myInfoCtrl.initialized">{{myInfoCtrl.favorite.description}}</div>
-<img ng-if="myInfoCtrl.initialized" class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.favorite.shortName}}.jpg" alt="{{myInfoCtrl.favorite.shortName}}">
+<h2 ng-if="!myInfoCtrl.initialized" class="text-center">Not signed up yet. <a ui-sref="public.signupForm">Sign up now!</a></h2>
+<div ng-if="myInfoCtrl.initialized" class="container">
+  <h2>Registered Info:</h2>
+  <ul class="list-group" id="my-info">
+    <li class="list-group-item">{{myInfoCtrl.firstName}}</li>
+    <li class="list-group-item">{{myInfoCtrl.lastName}}</li>
+    <li class="list-group-item">{{myInfoCtrl.email}}</li>
+    <li class="list-group-item">{{myInfoCtrl.phone}}</li>
+  </ul>
+  <h2>Favorite Dish:</h2>
+  <menu-item menu-item="myInfoCtrl.favorite"></menu-item>
+</div>
